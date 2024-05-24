@@ -41,3 +41,12 @@
 3. in our case it returns a `response` in case of 422 or 401 errors in `Authentication.js`
 4. output that information to the user in `AuthForm.js`
 5. add an indicator that the form was submitted successfully & that we're waiting for the response with the `useNavigation` hook
+
+## 4. Attaching Auth Tokens to Outgoing Requests
+
+1. The login feature already works because the `action` we created in `Authentication.js` send a request based on the selected mode
+2. in `Authentication.js`, attach the token we're getting back from the backend to requests to protect resources because now if you try to delete an event, you get an 401 unauthorized error
+   1. extract from the backend
+   2. store that token in `localStorage` after signing up or loging in
+   3. in a new `util` folder, add a new `auth.js` file where you add a helper `getAuthToken` function to get that stored `token` when needed
+   4. use that `getAuthToken` function in `EventDetail.js` for deleting events & in `EventForm.js` for adding and editing events
