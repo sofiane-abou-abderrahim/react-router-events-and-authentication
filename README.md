@@ -50,3 +50,12 @@
    2. store that token in `localStorage` after signing up or loging in
    3. in a new `util` folder, add a new `auth.js` file where you add a helper `getAuthToken` function to get that stored `token` when needed
    4. use that `getAuthToken` function in `EventDetail.js` for deleting events & in `EventForm.js` for adding and editing events
+
+## 5. Adding User Logout
+
+1.  in `MainNavigation.js`, add a new `logout` navigation link
+2.  the button should trigger an `action` that deletes the token
+    1. add a new `Logout.js` pages in the `pages` folder
+    2. inside of it define an `action` that clears the `localStorage` & gets rid of the `token`
+3.  in `App.js`, register a new `logout` route
+4.  in `MainNavigation.js`, send a request to this route by submitting a `<Form>` that targets this route
