@@ -23,3 +23,13 @@
    2. replace the button with a `<Link>` & add to it the `to` attribute set to `?mode` & a value based on the currently selected mode
    3. manage your `mode` with query parameters & access the currently set query parameter with the `useSearchParams` hook
 2. update `MainNavigation.js` so that when we click `Authentication` we load this login form by default
+
+## 2. Implementing the Auth Action
+
+1. enable user creation with an `action`
+   1. in `Authentication.js`, add an `action` that is triggered when the `Form` in `AuthForm.js` is submitted
+   2. get the data from the form with `formData`
+   3. send different requests based on the `mode` this form is in with help of `searchParams`
+   4. send the request to the backend
+   5. handle the response
+2. in `App.js`, add this action to the route definitions
