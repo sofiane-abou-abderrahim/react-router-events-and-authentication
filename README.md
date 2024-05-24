@@ -33,3 +33,11 @@
    4. send the request to the backend
    5. handle the response
 2. in `App.js`, add this action to the route definitions
+
+## 3. Validating User Input & Outputting Validation Errors
+
+1. in `AuthForm.js`, get the `action` data with the `useActionData` hook
+2. your `action` function must return something and not only a `redirect`
+3. in our case it returns a `response` in case of 422 or 401 errors in `Authentication.js`
+4. output that information to the user in `AuthForm.js`
+5. add an indicator that the form was submitted successfully & that we're waiting for the response with the `useNavigation` hook
