@@ -83,3 +83,11 @@
 2. in `App.js`, protect the `edit` & `new` routes so that there will not be accessible unless the user is logged in
    1. in `util/auth.js`, add a `checkAuthLoader` function that checks if there is a `token` & if not redirects the user away
    2. in `App.js`, use this `checkAuthLoader` to protect all these routes that need protection
+
+## 8. Adding Automatic Logout
+
+1. in `Root.js`, use `useEffect()` to set a timer whenever the `RootLayout` is rendered which happens when this application starts
+2. use `useLoaderData()` to get the `token`
+3. use this `token` as a dependency for `useEffect` so that this effect function runs whenever the `token` changes
+4. set a timer that expires after 1 hour & that then triggers that logout action (basically sends a request to that `logout` route)
+5. for that, use the `useSubmit()` hook to programmatically submit that `logout` form from `MainNavigation.js`
