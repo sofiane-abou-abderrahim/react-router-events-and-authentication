@@ -91,3 +91,11 @@
 3. use this `token` as a dependency for `useEffect` so that this effect function runs whenever the `token` changes
 4. set a timer that expires after 1 hour & that then triggers that logout action (basically sends a request to that `logout` route)
 5. for that, use the `useSubmit()` hook to programmatically submit that `logout` form from `MainNavigation.js`
+
+## 9. Managing the Token Expiration
+
+1. in `Authentication.js`, where you store the token, store the expiration time with help of `Date()` et `setHours()`
+2. in `util/auth.js`, update the `getAuthToken()` function to take a look at this `expiration` date & find out if the token expired with help of a new `getTokenDuration()` function
+3. in `Root.js`, trigger the `logout` action, if the token duration expired
+4. if the token is not expired, set the timeout duration at the remaining lifetime of the token
+5. in `Logout.js`, remove the `expiration` from the `localStorage`
