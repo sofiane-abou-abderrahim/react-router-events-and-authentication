@@ -5,14 +5,17 @@ const { NotAuthError } = require('./errors');
 const KEY = 'supersecret';
 
 function createJSONToken(email) {
+  console.log('Creating JSON token for:', email);
   return sign({ email }, KEY, { expiresIn: '1h' });
 }
 
 function validateJSONToken(token) {
+  console.log('Validating JSON token');
   return verify(token, KEY);
 }
 
 function isValidPassword(password, storedPassword) {
+  console.log('Validating password');
   return compare(password, storedPassword);
 }
 

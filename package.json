@@ -1,0 +1,21 @@
+{
+  "name": "react-router-events-and-authentication",
+  "version": "1.0.0",
+  "description": "React Router Events & Authentication app with frontend and backend",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "start": "node backend/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofiane-abou-abderrahim/react-router-events-and-authentication.git"
+  },
+  "author": "Sofiane Abou Abderrahim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sofiane-abou-abderrahim/react-router-events-and-authentication/issues"
+  },
+  "homepage": "https://github.com/sofiane-abou-abderrahim/react-router-events-and-authentication#readme"
+}

@@ -1,1 +1,28 @@
-{"events":[{"title":"Test!","image":"https://www.meydanfz.ae/wp-content/uploads/2021/10/Events-1024x576.png","date":"2024-06-08","description":"Testing...","id":"056e8678-87d4-4eeb-b60c-1e1966395b4c"}],"users":[{"email":"test@test.com","password":"$2a$12$fpOMr1HH324nwJX3u4q9AuEMfK8mWlzC8v3UFSLuL3ZRQL6s9ggT2","id":"1fb65971-1ce8-49a4-99f2-7b77d74209ce"},{"email":"test2@test.com","password":"$2a$12$coP.DwrouNDRCR0cRHkR5u4xZzcnWcrzhcJszk0yigDfmWtYm4abq","id":"97124ae0-6fb8-4e89-9d24-1d33506f9936"},{"email":"test3@test.com","password":"$2a$12$f83iGmGNEFRv5xEvdnn/hOXB/mK2bOo47cTwr62hFoLOSeTHuWPXC","id":"fb46a3c2-db33-4a1c-bd34-7b82d57cec00"}]}
+{
+  "events": [
+    {
+      "title": "Test!",
+      "image": "https://www.meydanfz.ae/wp-content/uploads/2021/10/Events-1024x576.png",
+      "date": "2024-06-08",
+      "description": "Testing...",
+      "id": "056e8678-87d4-4eeb-b60c-1e1966395b4c"
+    }
+  ],
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "$2a$12$fpOMr1HH324nwJX3u4q9AuEMfK8mWlzC8v3UFSLuL3ZRQL6s9ggT2",
+      "id": "1fb65971-1ce8-49a4-99f2-7b77d74209ce"
+    },
+    {
+      "email": "test2@test.com",
+      "password": "$2a$12$coP.DwrouNDRCR0cRHkR5u4xZzcnWcrzhcJszk0yigDfmWtYm4abq",
+      "id": "97124ae0-6fb8-4e89-9d24-1d33506f9936"
+    },
+    {
+      "email": "test3@test.com",
+      "password": "$2a$12$f83iGmGNEFRv5xEvdnn/hOXB/mK2bOo47cTwr62hFoLOSeTHuWPXC",
+      "id": "fb46a3c2-db33-4a1c-bd34-7b82d57cec00"
+    }
+  ]
+}
