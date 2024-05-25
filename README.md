@@ -59,3 +59,20 @@
     2. inside of it define an `action` that clears the `localStorage` & gets rid of the `token`
 3.  in `App.js`, register a new `logout` route
 4.  in `MainNavigation.js`, send a request to this route by submitting a `<Form>` that targets this route
+
+## 6. Updating the UI Based on Auth Status
+
+1. update the UI based on the existence of the `token`
+   1. make the `token` easily available in your entire app (on all your routes basically)
+   2. the information whether the `token` is available or not should be automatically updated so that the UI automatically updates
+2. to do so, you could use the `useContext` hook
+3. but, leverage React Router for doing that
+   1. in `App.js`, in the root route, add a `loader` that takes a look at `localStorage` & extract the `token` from it
+   2. React Router will reevaluate that, if we, for example, logout & update all the pages that use that `loader` data
+   3. in `util/auth.js`, add the `tokenLoader` function & call `getAuthToken()` inside of it & return its result
+   4. in order to use the data from that `tokenLoader` & easily get access to it, assign an `id` with a value of `root` to that route
+   5. in `MainNavigation.js`, use the `useRouteLoaderData` hook to get the `token` by targetting the `root` id
+   6. conditionally show that `Authentication` link if the `token` doesn't exist (so when the user is not logged in)
+   7. show the `Logout` link only when the `token` (so when the user is logged in)
+   8. in `EventsNavigation.js`, use the same approach as in `MainNavigation.js` & show the `New Event` link if there is a `token`
+   9. in `EventItem.js`, do the same to conditionally show the `Edit` & `Delete` menu
