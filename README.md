@@ -76,3 +76,10 @@
    7. show the `Logout` link only when the `token` (so when the user is logged in)
    8. in `EventsNavigation.js`, use the same approach as in `MainNavigation.js` & show the `New Event` link if there is a `token`
    9. in `EventItem.js`, do the same to conditionally show the `Edit` & `Delete` menu
+
+## 7. Adding Route Protection
+
+1. the user can still access a specific page that needs a token directly in the URL, like `/events/new`
+2. in `App.js`, protect the `edit` & `new` routes so that there will not be accessible unless the user is logged in
+   1. in `util/auth.js`, add a `checkAuthLoader` function that checks if there is a `token` & if not redirects the user away
+   2. in `App.js`, use this `checkAuthLoader` to protect all these routes that need protection
